@@ -1,0 +1,18 @@
+---
+layout: page.njk
+---
+<article class="article-info">
+  <header class="article-info__header">
+    <h1 class="article-info__title"> {{title}} </h1>
+    {% if page.url != '/about/' %}
+      <time class="article-info__date" datetime="{{ article.data.date }}">{{date | readableDate}}</time>
+    {% endif %}
+  </header>
+  <section class="article-info__body">
+    {{ content | safe }}
+  </section>
+	{% if page.url != '/about/' %}
+	  {% include 'back-btn.njk' %}
+	{% endif %}
+</article>
+{% include 'sidebar.njk' %}

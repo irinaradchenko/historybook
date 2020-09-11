@@ -1,0 +1,12 @@
+{% if title == 'lessons' %}
+    <title>Уроки історії — {{metadata.title}}</title>
+{% elif title == 'news' %}
+    <title>Новини освіти — {{metadata.title}}</title>
+{% elif title == 'copywrite' %}
+    <title>Копірайт тексти — {{metadata.title}}</title>
+{% elif title == 'stories' %}
+    <title>Розповіді — {{metadata.title}}</title>
+{% else%}
+    <title>{{title or metadata.title}} — {% if page.url == '/about/'  %} {{metadata.title}} {% else %}
+          {{metadata.description}} {% endif %} </title>
+{% endif %}

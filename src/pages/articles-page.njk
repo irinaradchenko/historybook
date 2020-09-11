@@ -1,0 +1,27 @@
+---
+layout: page.njk
+permalink: '/articles/'
+pageID: 'articles' 
+---
+
+<h2 class="page-title">Всі статті</h2>
+<div class="articles-page">
+  {% for article in collections.articles | reverse %}
+    {% set tagTitle = article.data.tags[1] %}
+    <div class="article-item">
+        <time class="article-item__date" datetime="{{ article.data.date | htmlDateString }}"> {{ article.data.date | readableDate }}</time>
+        <a href="{{ article.url | url }}" class="article-item__link">{{ article.data.title }}</a>
+        {% if tagTitle == 'lessons' %}
+             <a href="/articles/lessons/" class="article-item__tag">Уроки</a>
+        {% elif tagTitle == 'news' %}
+            <a href="/articles/news/" class="article-item__tag">Новини</a>
+        {% elif tagTitle == 'copywrite' %}
+            <a href="/articles/copywrite/" class="article-item__tag">Копірайт</a>
+        {% elif tagTitle == 'stories' %}
+            <a href="/articles/stories/" class="article-item__tag">Розповіді</a>
+        {% endif %}
+    </div>
+  {% endfor %}
+
+</div>
+

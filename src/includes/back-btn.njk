@@ -1,0 +1,13 @@
+<div class="article-info__links">
+	{% if tags[1] == 'news' %}
+		<a href="/articles/{{tags[1]}}/" class="back-btn">Назад до <b>Новин</b></a>
+	{% elif tags[1] == 'lessons' %}
+		<a href="/articles/{{tags[1]}}/" class="back-btn">Назад до <b>Уроків</b></a>
+	{% elif tags[1] == 'copywrite' %}
+		<a href="/articles/{{tags[1]}}/" class="back-btn">Назад до <b>Копірайтів</b></a>
+	{% elif tags[1] == 'stories' %}
+		<a href="/articles/{{tags[1]}}/" class="back-btn">Назад до <b>Розповідей</b></a>
+	{% endif %}
+	<a href="/articles/" class="back-btn back-btn--all">До всіх статей</a>
+</div>
+

@@ -1,0 +1,27 @@
+---
+layout: page.njk
+---
+
+<div class="page-cover page-cover--index">
+    <h2 class="page-title page-title--cover">Головна</h2>
+    <h3 class="page-subtitle">Огляд останніх подій в освіті України, нові законопроекти, сучасна освіта.</h3>
+</div>
+
+{% set articleslist = collections.news | head(-5) %}
+{% include "articles.njk" %}
+
+<a href="/articles/news/" class="btn-more">Більше новин</a>
+
+<h2 class="page-title">Нові розробки уроків історії</h2>
+
+{% set articleslist = collections.lessons | head(-5) %}
+{% include "articles.njk" %}
+
+<a href="/articles/lessons/" class="btn-more">Всі уроки</a>
+
+<h2 class="page-title">Читайте нові розповіді</h2>
+
+{% set articleslist = collections.stories | head(-5) %}
+{% include "articles.njk" %}
+
+<a href="/articles/stories/" class="btn-more">Більше розповідей</a>

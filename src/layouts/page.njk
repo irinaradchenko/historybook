@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "title.njk" %}
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
+    <link rel="shortcut icon" href="{{ '/images/favicon/favicon.ico' | url }}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    {% include 'header.njk' %}
+
+    <main class="content">
+      <div class="container {% if (not tag) and (page.url != '/') and (pageID != 'articles') %}article-container{% endif %}">
+        {{content | safe}}
+      </div>
+    </main>
+     
+     {% include 'footer.njk' %}
+     <script src="{{ '/scripts/main.js' | url }}"></script>
+  </body>
+</html>

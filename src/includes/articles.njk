@@ -1,0 +1,13 @@
+<div class="articles">
+  {% for article in articleslist | reverse %}
+	<a href="{{ article.url | url }}" class="article">
+		<h4 class="article__title">
+			{{ article.data.title }}
+		</h4>
+		<time class="article__date" datetime="{{ article.data.date | htmlDateString }}"> {{ article.data.date | readableDate }} </time>
+		<p class="article__description">
+			{{ article.data.description }}
+		</p>
+	</a>
+  {% endfor %}
+</div>
