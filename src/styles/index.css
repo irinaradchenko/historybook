@@ -12,6 +12,14 @@ li {
 	list-style: none;
 }
 
+button {
+	display: block;
+	font-family: inherit;
+	font-size: inherit;
+	background: transparent;
+	border: none;
+}
+
 body {
 	font-family: 'PT Serif', serif;
 	font-size: 18px;
@@ -163,6 +171,28 @@ body {
 
 .back-btn--all:hover:after {
 	right: 20px;
+}
+
+.print-btn {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	background-color: #f2f2f2;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	line-height: 1;
+	transition: .3s;
+	cursor: pointer;
+}
+
+.print-btn:hover {
+	background-color: #ddd;
+}
+
+.print-btn:before {
+	content: url(/images/icons/print-icon.svg);
+	padding-right: 10px;
+	margin-bottom: -2px;
 }
 
 

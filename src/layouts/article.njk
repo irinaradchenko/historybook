@@ -10,6 +10,7 @@ layout: page.njk
   </header>
   <section class="article-info__body">
     {{ content | safe }}
+    <button class="print-btn" onclick="print()">Версія для друку</button>
   </section>
 	{% if page.url != '/about/' %}
 	  {% include 'back-btn.njk' %}
