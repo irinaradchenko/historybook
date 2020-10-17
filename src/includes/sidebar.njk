@@ -3,7 +3,7 @@
 		Останні статті
 	</h6>
 	<div class="sidebar__articles">
-		{% for article in collections.articles | reverse | head(-5) %}
+		{% for article in collections.articles | head(-5) %}
 			<a href="{{ article.url | url }}" class="sidebar__link">{{ article.data.title }}</a>
 			<p class="sidebar__description">
 				{{ article.data.description | truncate(50) }}
