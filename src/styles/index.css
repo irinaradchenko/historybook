@@ -330,7 +330,7 @@ body {
 }
 
 .article-info__body img {
-	width: 100%;
+	max-width: 100%;
 	margin: 20px 0;
 }
 
