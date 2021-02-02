@@ -1,0 +1,6 @@
+{
+  "tags": [
+    "articles"
+  ],
+  "layout": "article.njk"
+}
