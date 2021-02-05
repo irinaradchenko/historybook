@@ -462,6 +462,29 @@ body {
 	margin-top: 30px;
 }
 
+/*404*/
+
+.error-page {
+	width: 100%;
+	text-align: center;
+}
+
+.error {
+	font-weight: bold;
+	font-size: 200px;
+}
+
+.error-home {
+	margin-top: 40px;
+}
+
+.error-btn {
+	color: #fff;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #ff5353;
+}
+
 @media (max-width: 970px) {
 
 	.header {

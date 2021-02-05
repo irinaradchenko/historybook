@@ -15,7 +15,7 @@
     {% include 'header.njk' %}
 
     <main class="content">
-      <div class="container {% if (not tag) and (page.url != '/') and (pageID != 'articles') %}article-container{% endif %}">
+      <div class="container {% if (not tag) and (page.url != '/') %}article-container{% endif %}">
         {{content | safe}}
       </div>
     </main>
