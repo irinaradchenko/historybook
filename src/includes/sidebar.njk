@@ -1,13 +1,26 @@
 <asinde class="sidebar">
 	<h6 class="sidebar__title">
-		Останні статті
+		{% if page.url == '/about/' %}Читати{%else%} Інші{%endif%} статті
 	</h6>
 	<div class="sidebar__articles">
-		{% for article in collections.articles | head(-5) %}
-			<a href="{{ article.url | url }}" class="sidebar__link">{{ article.data.title }}</a>
-			<p class="sidebar__description">
-				{{ article.data.description | truncate(50) }}
-			</p>
+		{% if tags == 'news' %}
+			{% set sidebarList = collections.news | head(-6) | reverse %}
+		{% elif tags == 'lessons' %}
+			{% set sidebarList = collections.lessons | head(-6) | reverse %}
+		{% elif tags == 'copywrite' %}
+			{% set sidebarList = collections.copywrite | head(-6) | reverse %}
+		{% elif tags == 'stories' %}
+			{% set sidebarList = collections.stories | head(-6) | reverse %}
+		{% else %}
+			{% set sidebarList = collections.all | head(-6) %}
+		{% endif %}
+		{% for article in sidebarList %}
+			{% if article.url != page.url %}
+				<a href="{{ article.url | url }}" class="sidebar__link">{{ article.data.title }}</a>
+				<p class="sidebar__description">
+					{{ article.data.description | truncate(50) }}
+				</p>				
+			{% endif %}
 		{% endfor %}
 	</div>
 </asinde>

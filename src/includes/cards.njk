@@ -1,0 +1,13 @@
+<div class="cards">
+  {% for article in articleslist | reverse %}
+	<a href="{{ article.url | url }}" class="card">
+		<h4 class="card__title">
+			{{ article.data.title }}
+		</h4>
+		<time class="card__date" datetime="{{ article.data.date | isoDate }}"> {{ article.data.date | articleDate }} </time>
+		<p class="card__description">
+			{{ article.data.description }}
+		</p>
+	</a>
+  {% endfor %}
+</div>

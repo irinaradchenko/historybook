@@ -3,6 +3,7 @@ title: Світшот
 date: 2020-02-06
 tags: copywrite
 description: Світшот
+layout: article.njk
 ---
 
 **Рерайтинг**

@@ -3,6 +3,7 @@ title: Как заняться спортом
 date: 2020-01-24
 tags: copywrite
 description: Советы, как пересилить себя и заняться спортом
+layout: article.njk
 ---
 
 **Рерайтинг**

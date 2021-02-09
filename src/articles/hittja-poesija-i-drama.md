@@ -3,6 +3,7 @@ title: Наталка Тріщ. Життя...
 description: Вірш - роздум про людське життя Наталки Тріщ, поетеси із Львівщини 
 date: 2021-01-21
 tags: stories
+layout: article.njk
 ---
 
 

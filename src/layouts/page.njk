@@ -4,23 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="lQSPzbQcwpZmZs8vdf92twdc_BtcE6thSqG2F7PmYMA" />
-    {% include "title.njk" %}
+    <title>{{title or metadata.title}}</title>
     <meta name="description" content="{{ description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/styles/print.css' | url }}" media="print">
-    <link rel="shortcut icon" href="{{ '/images/favicon/favicon.ico' | url }}" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/print.css" media="print">
+    <link rel="icon" type="image/png" href="/images/icons/icon_512.png">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display&display=swap" rel="stylesheet">
   </head>
   <body>
     {% include 'header.njk' %}
 
-    <main class="content">
-      <div class="container {% if (not tag) and (page.url != '/') %}article-container{% endif %}">
-        {{content | safe}}
-      </div>
-    </main>
+    {{content | safe}}
      
-     {% include 'footer.njk' %}
-     <script src="{{ '/scripts/main.js' | url }}"></script>
+    {% include 'footer.njk' %}
+     <script src="/scripts/main.js"></script>
   </body>
 </html>

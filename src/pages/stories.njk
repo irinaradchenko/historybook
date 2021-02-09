@@ -1,0 +1,17 @@
+---
+title: Розповіді – HistoryBook
+description: Повість власного автораства повість про долю дворянської дівчини початку ХХ століття, про її кохання і відмінність станів, можливо про любовний трикутник.
+layout: page.njk
+permalink: /stories/
+eleventyExcludeFromCollections: true
+---
+
+<main class="content container">
+  <div class="page-cover page-cover--stories">
+    <h2 class="page-title page-title--cover">Розповіді</h2>
+    <h3 class="page-subtitle">Представляю вашій увазі власну повість та підбірки поезій.</h3>
+  </div> 
+  
+  {% set articleslist = collections.stories %}
+  {% include "cards.njk" %}
+</main>

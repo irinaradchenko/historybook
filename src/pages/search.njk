@@ -1,0 +1,25 @@
+---
+title: Пошук статей
+permalink: /articles/
+layout: page.njk
+eleventyExcludeFromCollections: true
+---
+
+<main class="content container search-container">
+    <div class="search">
+        <h2 class="search__title">Введіть пошуковий запит</h2>
+        <div class="gcse-search"></div>
+    </div>
+    {% set recentArticles = collections.all | head(-10) %}
+    <h2 class="page-title">Нещодавні статті</h2>
+    <div class="recent">
+        {% for article in recentArticles | reverse %}
+        <a href="{{article.url}}" class="recent__item">
+            <div class="recent__date"> {{article.data.date | articleDate}} </div>
+            <h3 class="recent__title"> {{article.data.title}} </h3>
+        </a>
+        {% endfor %}
+    </div>
+</main>
+
+<script async src="https://cse.google.com/cse.js?cx=79ea5cbb311b3ce0b"></script>

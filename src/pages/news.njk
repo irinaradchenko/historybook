@@ -1,0 +1,17 @@
+---
+title: Актуальні новини освіти України – HistoryBook
+description: Актуальні новини та події в освіті України
+layout: page.njk
+permalink: /news/
+eleventyExcludeFromCollections: true
+---
+
+<main class="content container">
+  <div class="page-cover page-cover--news">
+    <h2 class="page-title page-title--cover">Новини</h2>
+    <h3 class="page-subtitle">Актуальні новини та події в освіті України</h3>
+  </div>
+  
+  {% set articleslist = collections.news %}
+  {% include "cards.njk" %}
+</main>

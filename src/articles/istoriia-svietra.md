@@ -3,6 +3,7 @@ title: Історія светра
 date: 2020-02-15
 tags: copywrite
 description: Текст про історію светра російською та українською мовами
+layout: article.njk
 ---
 
 Русский текст

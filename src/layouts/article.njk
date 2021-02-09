@@ -1,19 +1,17 @@
 ---
 layout: page.njk
 ---
-<article class="article-info">
-  <header class="article-info__header">
-    <h1 class="article-info__title"> {{title}} </h1>
-    {% if page.url != '/about/' %}
-      <time class="article-info__date" datetime="{{ article.data.date }}">{{date | readableDate}}</time>
-    {% endif %}
-  </header>
-  <section class="article-info__body">
-    {{ content | safe }}
-    <button class="print-btn" onclick="print()">Версія для друку</button>
-  </section>
-	{% if page.url != '/about/' %}
-	  {% include 'back-btn.njk' %}
-	{% endif %}
-</article>
-{% include 'sidebar.njk' %}
+<main class="content container article-container">
+  <article class="article">
+    <header class="article__header">
+      <h1 class="article__title"> {{title}} </h1>
+      <time class="article__date" datetime="{{ date | isoDate }}">{{date | articleDate}}</time>
+    </header>
+    <section class="article__body">
+      {{ content | safe }}
+      <button class="print-btn">Версія для друку</button>
+    </section>
+  	{% include 'back-btn.njk' %}
+  </article>
+  {% include 'sidebar.njk' %}
+</main>

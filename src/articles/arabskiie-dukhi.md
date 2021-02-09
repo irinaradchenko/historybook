@@ -3,6 +3,7 @@ title: Арабские духи
 description: Арабские духи
 date: 2020-01-23
 tags: copywrite
+layout: article.njk
 ---
 
 **Исходный текст**

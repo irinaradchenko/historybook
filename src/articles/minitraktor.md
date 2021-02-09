@@ -3,6 +3,7 @@ title: Минитрактор
 date: 2020-01-24
 tags: copywrite
 description: Преимущества использования минитрактора
+layout: article.njk
 ---
 
 **Рерайтинг**

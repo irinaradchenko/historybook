@@ -1,0 +1,33 @@
+---
+title: HistoryBook – конспекти цікавих уроків історії
+description: Конспекти цікавих уроків історії, головні новини та зміни в освіті України, копірайти текстів з високою унікальністю.
+layout: page.njk
+permalink: index.html
+eleventyExcludeFromCollections: true
+---
+
+<main class="content container">
+    <div class="page-cover page-cover--index">
+        <h2 class="page-title page-title--cover">Головна</h2>
+        <h3 class="page-subtitle">Огляд останніх подій в освіті України, нові законопроекти, сучасна освіта.</h3>
+    </div>
+    
+    {% set articleslist = collections.news | head(-5) %}
+    {% include "cards.njk" %}
+    
+    <a href="/news/" class="btn-more">Більше новин</a>
+    
+    <h2 class="page-title">Цікаві форми проведення уроків історії в школі</h2>
+    
+    {% set articleslist = collections.lessons | head(-5) %}
+    {% include "cards.njk" %}
+    
+    <a href="/lessons/" class="btn-more">Всі уроки</a>
+    
+    <h2 class="page-title">Читайте нові розповіді</h2>
+    
+    {% set articleslist = collections.stories | head(-5) %}
+    {% include "cards.njk" %}
+    
+    <a href="/stories/" class="btn-more">Більше розповідей</a>
+</main>

@@ -1,0 +1,17 @@
+---
+title: Цікаві уроки історії – HistoryBook
+description: Цікаві форми проведення уроків історії в школі
+layout: page.njk
+permalink: /lessons/
+eleventyExcludeFromCollections: true
+---
+
+<main class="content container">
+  <div class="page-cover page-cover--lessons">
+    <h2 class="page-title page-title--cover">Цікаві уроки історії</h2>
+    <h3 class="page-subtitle">Цікаві форми проведення уроків історії в школі</h3>
+  </div>
+  
+  {% set articleslist = collections.lessons %}
+  {% include "cards.njk" %}
+</main>

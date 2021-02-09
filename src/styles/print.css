@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6 {
     page-break-after: avoid
 }
 
-.header, .footer, .sidebar, .article-info__date, .article-info__links, .print-btn {
+.header, .footer, .sidebar, .article__date, .article__links, .print-btn {
 	display: none;
 }
 

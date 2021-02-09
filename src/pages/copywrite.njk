@@ -1,0 +1,17 @@
+---
+title: Копірайт невеликих текстів – HistoryBook
+description: Копірат текстів з високим рівнем унікальност
+layout: page.njk
+permalink: /copywrite/
+eleventyExcludeFromCollections: true
+---
+
+<main class="content container">
+  <div class="page-cover page-cover--copywrite">
+    <h2 class="page-title page-title--cover">Копірайт статті</h2>
+    <h3 class="page-subtitle">Копірат текстів з високим рівнем унікальності.</h3>
+  </div> 
+  
+  {% set articleslist = collections.copywrite %}
+  {% include "cards.njk" %}
+</main>
